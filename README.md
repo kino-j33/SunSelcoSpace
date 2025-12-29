@@ -51,6 +51,7 @@ Servlet / JSP を用いた基本的な MVC 構成を意識し、
 
 ## ディレクトリ構成
 
+```text
 SunSelcoSpace
 ├─ src
 │  └─ main
@@ -71,6 +72,7 @@ SunSelcoSpace
 │ └─ initial_data.sql
 ├─ pom.xml
 └─ README.md
+```
 
 ---
 
