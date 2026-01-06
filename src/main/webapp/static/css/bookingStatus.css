@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/*	reset
+=====================*/
+dl,
+dd,
+p {
+  margin: 0;
+}
+
+/*	item
+=====================*/
+.itemWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.itemWrap + .itemWrap {
+	margin-top: 10px;
+}
+
+.item--content {
+  flex: 1;
+  min-width: 0;
+}
+.item--content > *:nth-child(2) {
+	margin-top: 10px;
+}
+
+.item--btn {
+  flex: 0 0 auto;
+}
+
+.item--btn button {
+	padding: 4px 8px;
+}
+
+.flex__row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex__gap {
+  gap: 25px;
+}
+
+/*	font
+=====================*/
+h2 > span {
+	font-size: 1.125rem;
+}
+.room-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.item--content dt,
+.item--content dd {
+  font-size: 0.875rem;
+  color: var(--color--light_blue);
+}

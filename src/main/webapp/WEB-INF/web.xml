@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app
+    xmlns="https://jakarta.ee/xml/ns/jakartaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+    					https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+    version="6.0">
+
+	 <!-- 文字コードをUTF-8に設定 -->
+   <filter>
+		<filter-name>setCharacterEncodingFilter</filter-name>
+		<filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+
+	<!-- ログインしてるかをチェック -->
+	<filter>
+		<filter-name>authenticationFilter</filter-name>
+		<filter-class>jp.co.sunselcospace.filter.AuthFilter</filter-class>
+	</filter>
+
+    <!-- filter-mappingの上から下への順序で実行される -->
+
+    <!-- すべてのリクエストにUTF-8、認証チェックを適用 -->
+	<filter-mapping>
+		<filter-name>setCharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>authenticationFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- 15分アクセスがないとタイムアウト -->
+	<session-config>
+		<session-timeout>15</session-timeout>
+	</session-config>
+
+	<!-- URLにファイル名がないときの表示ページ -->
+	<welcome-file-list>
+		<welcome-file>public/index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+body {
+  margin: 0;
+  background: #f7f7fb;
+  color: #111;
+  min-height: 100vh;
+/*  display: flex;
+  justify-content: center;
+  align-items: center;*/
+}
+
+.wrap {
+  width: min(1000px, 95%);
+  padding: 24px;
+  margin: 0 auto;
+}
+
+.row {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 40px;
+  align-items: start;
+
+  /* 並びの初期値（画像 → 説明） */
+  grid-template-areas:
+    "img text";
+  grid-template-columns: 1fr 1fr;
+}
+
+/* 偶数行は並びを逆にする（説明 → 画像） */
+.row:nth-of-type(even) {
+  grid-template-areas:
+    "text img";
+}
+
+/* 画像 */
+.row img {
+  grid-area: img;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: #ddd;
+  object-fit: cover;
+}
+
+/* 説明文 */
+.info-box {
+  grid-area: text;
+  align-self: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(15, 15, 30, 0.06);
+}
+
+.info-box h2 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.info-box p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* スマホ対応：縦並びに */
+@media (max-width: 620px) {
+  .row,
+  .row:nth-of-type(even) {
+    grid-template-areas:
+      "img"
+      "text";
+    grid-template-columns: 1fr;
+  }
+}

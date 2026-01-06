@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+/*	img
+=====================*/
+.img_container {
+	width: 33%;
+	margin: 0 auto;
+	box-shadow: 5px 5px 15px rgba(15, 15, 30, 0.2);
+}
+
+.img_container > img {
+	width: 100%;
+	height: auto;
+}

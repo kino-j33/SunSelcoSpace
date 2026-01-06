@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource
+        name="jdbc/sun_selco_space"
+        auth="Container"
+        type="javax.sql.DataSource"
+        driverClassName="org.postgresql.Driver"
+        url="jdbc:postgresql://localhost:5432/sun_selco_space"
+        username="postgres"
+        password="REPLACE_WITH_YOUR_PASSWORD"
+        maxTotal="20"
+        maxIdle="10"
+        maxWaitMillis="5000"
+        removeAbandonedOnBorrow="true"
+        logAbandoned="true"
+        removeAbandonedTimeout="60" />
+</Context>

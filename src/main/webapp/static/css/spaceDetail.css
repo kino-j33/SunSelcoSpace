@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+body{
+	background: #f7f7fb;	
+}
+
+/* 画像 */
+.info-contents {
+	max-width: 600px;
+	    width: 100%;
+	margin: 0 auto;
+    margin-bottom: 30px;
+}
+.info-contents img {
+	 display: block;
+	 width: 100%;
+     border-radius: 10px;
+	}
+
+
+/* 情報行 */
+.info-row {
+    margin-bottom: 15px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+/* ボタン */
+.booking-formaction {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 6px 16px;
+}
+
+.info-list{
+	background: #fff;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 6px 24px rgb(207 231 255);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.info-list:hover {
+    /* 少し浮き上がる */
+    transform: translateY(-5px) scale(1.01);
+
+    /* 影をより強く */
+    box-shadow:
+	0 12px 30px rgba(0, 0, 0, 0.10),
+	  0 0 35px  rgb(220 237 255);
+}
+.info-all{
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 20px;
+	max-width: 720px;
+	width: 100%;
+}

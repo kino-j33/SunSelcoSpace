@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+body{
+	background: #f7f7fb;
+	
+}
+.login-form {
+    width: 320px;
+	border-radius: 10px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+	box-shadow: 1px 1px 10px rgb(211 233 255);
+
+}
+.error-message li{
+	list-style-type: none;
+	text-align: center;
+}
+.error-message + .login-form {
+	margin: 10px auto 40px;
+}
+h1 {
+    text-align: center;
+}
+
+.form-input {
+    margin-bottom: 15px;
+}
+
+.form-input label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-input input {
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+.form-row {
+    text-align: center;
+    margin-top: 15px;
+}
+
+button {
+    padding: 6px 16px;
+}
